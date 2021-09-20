@@ -9,8 +9,11 @@
     <ion-card-content>
       <ion-item>
         <ion-label>usuario</ion-label>
-        <ion-input type="text" placeholder="usuario"></ion-input>
+        <ion-input type="text" placeholder="usuario" #nombre></ion-input>
       </ion-item>
+      <ion-button (click)="toast()" expand="block" shape="round">
+        recuperar
+      </ion-button>
     </ion-card-content>
   </ion-card>
 
