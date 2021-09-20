@@ -12,8 +12,6 @@ import { RegistroService} from '../registro.service';
 })
 export class LogInPage implements OnInit {
   user : usuario;
-  nombre: string;
-  password: string;
 
 
   constructor(
