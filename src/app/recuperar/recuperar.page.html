@@ -1,19 +1,21 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="ion-text-center">
     <ion-title>recuperar</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-content>
-      <ion-item>
+  <ion-card id="card2">
+    <ion-card-content >
+      <ion-item id="item1">
         <ion-label>usuario</ion-label>
         <ion-input type="text" placeholder="usuario" #nombre></ion-input>
-      </ion-item>
-      <ion-button (click)="toast()" expand="block" shape="round">
-        recuperar
-      </ion-button>
+      </ion-item >
+
+        <ion-button id="button1" (click)="tostada()" expand="block" shape="round">
+          recuperar
+        </ion-button>
+
     </ion-card-content>
   </ion-card>
 
