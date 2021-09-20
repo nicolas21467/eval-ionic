@@ -28,6 +28,17 @@ export class LogInPage implements OnInit {
     const nom =     nombre.value
     const pas =     password.value
 
+    const alert = await this.alerta.create({
+      cssClass: 'my-custom-class',
+      header: 'error',
+      subHeader: 'error',
+      message: 'error.',
+      buttons: ['ok']
+    });
+    await alert.present();
+
+
+
 
 
 

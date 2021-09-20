@@ -4,10 +4,11 @@ ion-toolbar{
 ion-content{
     #card1{
         margin-top: 50px;
-        height: 350px;
-        width: 300px;
-        margin-left: 50px;
-        margin-right: 50px;
+        height: auto;
+        width: auto;
+        margin-left: 25px;
+        margin-right: 25px;
+        border-radius:25px;
     }
     #ingresar{
         margin-top: 50px;
