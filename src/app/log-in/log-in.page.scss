@@ -1,0 +1,18 @@
+ion-toolbar{
+    --background:rgb(0, 4, 255);
+}
+ion-content{
+    #card1{
+        margin-top: 50px;
+        height: 350px;
+        width: 300px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    #ingresar{
+        margin-top: 50px;
+    }
+    #olvidar{
+        margin-top: 25px;
+    }
+}

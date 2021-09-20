@@ -8,12 +8,12 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <ion-card id="card1">
     <ion-card-header class="ion-text-center">
       <ion-card-title >iniciar sesion</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-item>
+      <ion-item >
         <ion-label>usuario</ion-label>
         <ion-input placeholder="usuario" #nombre></ion-input>
       </ion-item>
@@ -21,7 +21,7 @@
         <ion-label>contraseña</ion-label>
         <ion-input placeholder="contrasena" type="password"#password></ion-input>
       </ion-item>
-      <ion-button id="ingresar" (click)="ingresar()"  color="warning"expand="block"  shape="round">
+      <ion-button id="ingresar" (click)="ingresar(nombre,password)"  color="warning"expand="block"  shape="round">
         ingresar
       </ion-button>
       <ion-button id="olvidar"(click)="cambiar()" color="primary" expand="block"  shape="round">

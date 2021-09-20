@@ -13,7 +13,7 @@ import { RegistroService} from '../registro.service';
 export class LogInPage implements OnInit {
   user : usuario;
   nombre: string;
-  contrasena:string;
+  password: string;
 
 
   constructor(
@@ -26,9 +26,9 @@ export class LogInPage implements OnInit {
 
   ngOnInit() {}
   async ingresar(nombre:HTMLInputElement,
-                  contrasena:HTMLInputElement){
+                  password:HTMLInputElement){
     const nom =     nombre.value
-    const pas =     contrasena.value
+    const pas =     password.value
 
 
 
