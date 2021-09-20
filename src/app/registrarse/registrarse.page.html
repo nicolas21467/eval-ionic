@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>registrarse</ion-title>
+    <ion-title class="ion-text-center">registrarse</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">nombre</ion-label>
+        <ion-input type="text" #nombre ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">contrasena</ion-label>
+        <ion-input type="text" #contrasena></ion-input>
+      </ion-item>
+      <ion-button (click)="registrarse(nombre,contrasena)" expand="block"  shape="round">
+        registrarse
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
+
