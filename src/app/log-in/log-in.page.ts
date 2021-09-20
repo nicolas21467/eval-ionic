@@ -31,7 +31,7 @@ export class LogInPage implements OnInit {
 
 
 
-    this.registroService.verifyusuario(nom,pas);      
+    this.registroService.verifyusuario(nom,pas);     
     this.router.navigate(['/cuenta']);
   }
   async cambiar(){
