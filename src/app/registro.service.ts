@@ -28,12 +28,13 @@ export class RegistroService {
   getUsuarios(){return this.user
   }
   getUsuario(id:number){
-    return this.user.find(y=>{return y.id==id})
+    return this.user.find(x=>{return x.id==id})
   }
-  verifyusuario(nombre:string,contrasena:string){
-       this.user.find(x=>{return x.nombre==nombre,
-                                 x.contrasena==contrasena})
+  getnombre(nombre:string){
+    return this.user.find(x=>{return x.nombre==nombre})
     }
+  getcontrasena(contrasena:string){
+    return this.user.find(x=>x.contrasena==contrasena)}
   
   addusuario(nombre:string,contrasena:string){
     this.user.push({

@@ -4,6 +4,7 @@ import { usuario } from '../usuario.model';
 
 import { ActivatedRoute, Router } from '@angular/router'
 import { RegistroService} from '../registro.service';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-log-in',
@@ -12,6 +13,7 @@ import { RegistroService} from '../registro.service';
 })
 export class LogInPage implements OnInit {
   user : usuario;
+  nombre: string;
 
 
   constructor(
@@ -25,8 +27,9 @@ export class LogInPage implements OnInit {
   ngOnInit() {}
   async ingresar(nombre:HTMLInputElement,
                   password:HTMLInputElement){
-    const nom =     nombre.value
-    const pas =     password.value
+    const nom = nombre.value
+    const pas =     password.value  
+    this.nombre= String(nom);  
 
     const alert = await this.alerta.create({
       cssClass: 'my-custom-class',
@@ -36,19 +39,16 @@ export class LogInPage implements OnInit {
       buttons: ['entendido']
     });
 
-    if(nom === 'juan123'&& pas==='112233'){
-    this.registroService.verifyusuario(nom,pas);     
-    this.router.navigate(['/cuenta']);
-    }
-    else{
+    if(this.nombre === '' || pas===''){
     await alert.present();
     }
+    else{
+
+    this.router.navigate(['/cuenta']);
+    };
 
 
 
 
-  }
-  async cambiar(){
-    this.router.navigate(['/recuperar']);
   }
 }

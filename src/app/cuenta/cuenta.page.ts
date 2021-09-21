@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import{usuario}from'../usuario.model';
 import { RegistroService } from '../registro.service';
 
+
 import { ActivatedRoute, Router } from '@angular/router';
 
 
@@ -11,7 +12,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./cuenta.page.scss'],
 })
 export class CuentaPage implements OnInit {
-  user:usuario;
+  usuario:usuario;
+  user:[]
 
   constructor(    
     private router: Router,
@@ -21,12 +23,10 @@ export class CuentaPage implements OnInit {
     }
 
 
-  ngOnInit()     {
-    this.activatedRouter.paramMap.subscribe(paramMap =>{
-        const id = Number(paramMap.get('id')) // convertir a number pq es string
-        this.user = this.RegistroService.getUsuario(id); // llamada al servicio para obtener playa
-      })
+  ngOnInit(){
+    this.activatedRouter.paramMap.subscribe(paramMap => {
+      const name = paramMap.get('nombre') 
+      this.usuario = this.RegistroService.getnombre(String(name));
+    })
   }
-
-
 }

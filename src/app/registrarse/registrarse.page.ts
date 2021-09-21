@@ -10,9 +10,11 @@ import { RegistroService } from '../registro.service';
 })
 export class RegistrarsePage implements OnInit {
 
+
   constructor(private registroservice:RegistroService,
                       private router:Router,
                       private Alertcontroler:AlertController) { }
+
 
   ngOnInit() {
   }
@@ -20,10 +22,11 @@ export class RegistrarsePage implements OnInit {
     nombre:HTMLInputElement,
     contrasena:HTMLInputElement,
     vericontrasena:HTMLInputElement){
-    const nom=nombre.value;
+    const nom=String(nombre);
     const pas=contrasena.value;
     const vali=vericontrasena.value;
-    
+
+
     const alert = await this.Alertcontroler.create({
       cssClass: 'my-custom-class',
       header: '¡error!',
@@ -37,8 +40,7 @@ export class RegistrarsePage implements OnInit {
     }
 
     else{
-    this.registroservice.addusuario(nom,pas);
-    this.router.navigate(['/cuenta']);
+    this.router.navigate(['/this.nombre']);
 
     }
 
