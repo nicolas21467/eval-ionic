@@ -15,7 +15,11 @@
         <ion-label position="floating">contrasena</ion-label>
         <ion-input type="text" #contrasena></ion-input>
       </ion-item>
-      <ion-button (click)="registrarse(nombre,contrasena)" expand="block"  shape="round">
+      <ion-item>
+        <ion-label position="floating">validacion contrasena</ion-label>
+        <ion-input type="text" #vericontrasena></ion-input>
+      </ion-item>
+      <ion-button (click)="registrarse(nombre,contrasena,vericontrasena)" expand="block"  shape="round">
         registrarse
       </ion-button>
 
