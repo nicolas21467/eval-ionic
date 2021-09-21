@@ -35,15 +35,18 @@ export class LogInPage implements OnInit {
       message: 'error.',
       buttons: ['ok']
     });
-    await alert.present();
 
-
-
-
-
-
+    if(nom === 'juan123'&& pas==='112233'){
     this.registroService.verifyusuario(nom,pas);     
     this.router.navigate(['/cuenta']);
+    }
+    else{
+    await alert.present();
+    }
+
+
+
+
   }
   async cambiar(){
     this.router.navigate(['/recuperar']);
