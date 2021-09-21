@@ -3,7 +3,7 @@ import{usuario}from'../usuario.model';
 import { RegistroService } from '../registro.service';
 
 import { ActivatedRoute, Router } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-cuenta',
@@ -16,22 +16,8 @@ export class CuentaPage implements OnInit {
   constructor(    
     private router: Router,
     private RegistroService: RegistroService,
-    private activatedRouter: ActivatedRoute,
-    private menu:MenuController){
+    private activatedRouter: ActivatedRoute){
 
-    }
-    openFirst() {
-      this.menu.enable(true, 'first');
-      this.menu.open('first');
-    }
-  
-    openEnd() {
-      this.menu.open('end');
-    }
-  
-    openCustom() {
-      this.menu.enable(true, 'custom');
-      this.menu.open('custom');
     }
 
 
