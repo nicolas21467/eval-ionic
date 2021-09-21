@@ -30,10 +30,10 @@ export class LogInPage implements OnInit {
 
     const alert = await this.alerta.create({
       cssClass: 'my-custom-class',
-      header: 'error',
-      subHeader: 'error',
-      message: 'error.',
-      buttons: ['ok']
+      header: '¡error de validacion!',
+      subHeader: 'contraseña o usuario',
+      message: 'el usuario o contraseña no son validos por favor ingrese de nuevo.',
+      buttons: ['entendido']
     });
 
     if(nom === 'juan123'&& pas==='112233'){
